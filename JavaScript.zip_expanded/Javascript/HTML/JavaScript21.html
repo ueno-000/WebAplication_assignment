@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>演習21</title>
+	<script src="../JS/JavaScript21.js"></script>
+</head>
+<body>
+	<h1>ユーザー登録</h1>
+		
+	<style>
+	  #input1:valid {
+	    color: white;
+	  }
+	  #input1:invalid {
+	    background: red;
+	  }
+	</style>
+	
+	<a id="errorMessageName" style="visibility: hidden;">名前は必須です。</a>
+	<br>
+	<a id="errorMessageAdress" style="visibility: hidden;">住所は必須です。</a>
+	<br>
+	<a id="errorMessageTel" style="visibility: hidden;">電話番号は必須です。</a>
+	<br>
+	
+	<form action="JavaScript21Next.html" id="myForm">
+			
+		<div>
+ 			<label for="name">名前：</label>
+        	<input type="text" id="name" onblur="checkName()" required/>
+
+		</div>
+		
+		<div>
+ 			<label for="adress">住所：</label>
+        	<input type="text" id="adress" onblur="checkAdress()" required/>
+		</div>
+		
+		<div>
+			<label for="tel">電話番号：</label>
+        	<input type="text" id="tel" onblur="checkTel()" required/>
+		</div>
+		
+		<input type="submit" value="登録">		
+	</form>
+
+
+</body>
+</html>
