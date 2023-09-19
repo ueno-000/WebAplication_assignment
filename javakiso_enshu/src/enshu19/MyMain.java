@@ -6,21 +6,21 @@ public class MyMain {
 	{
 	
 		int moneyA;
-		moneyA = 504;
+		moneyA = 500;
 		
 		int moneyB;
-		moneyB = 557;
+		moneyB = 550;
 		
 		int moneyC;
-		moneyC = 1000;
+		moneyC = 150;
 		
 		int moneyD;
-		moneyD = 1500;
+		moneyD = 150;
 		
 		
-		float sumMoney;
 		
-		System.out.println(sumMoney(moneyA, moneyB, moneyC, moneyD));
+		System.out.println("Aさんの所持金:"+moneyA+"円\n"+"Bさんの所持金:"+moneyB+"円\n"+"Cさんの所持金:"+moneyC+"円\n"+"Dさんの所持金:"+moneyD+"円\n"+
+		"合計金額:"+sumMoney(moneyA, moneyB, moneyC, moneyD)+"円\r\n"+"平均金額:"+aveMoney(moneyA, moneyB, moneyC, moneyD)+"円\r\n");
 
 		
 	}
@@ -36,4 +36,16 @@ public class MyMain {
 	private static int sumMoney(int studentAMoney , int studentBMoney , int studentCMoney, int studentDMoney) {
 		return studentAMoney +studentBMoney +studentCMoney+studentDMoney;
 	}
+    /**
+     *平均金額を求める
+     * @param studentAMoney Aさんの所持金
+     * @param studentBMoney Bさんの所持金
+     * @param studentCMoney Cさんの所持金
+     * @param studentDMoney Dさんの所持金   
+     * @return 合計金額
+     */
+	private static double aveMoney(int studentAMoney , int studentBMoney , int studentCMoney, int studentDMoney) {
+	    return (studentAMoney + studentBMoney + studentCMoney + studentDMoney) / 4.0; 
+	}
+
 }
